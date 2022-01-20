@@ -1,0 +1,206 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 24px;
+}
+body {
+  background-color: black;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* width: 375px; */
+}
+main {
+  min-width: 375px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+h1 {
+  color: hsl(187, 13%, 26%);
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 10px;
+  font-size: 1rem;
+  margin: 20px;
+}
+.container {
+  height: 100vh;
+  width: 375px;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px 20px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 05px;
+}
+h2 {
+  color: hsl(187, 7%, 24%);
+  font-size: 0.7rem;
+}
+label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: hsl(180, 12%, 31%);
+}
+.bill {
+}
+.bill_inp {
+  color: rgb(15, 77, 15);
+  font-weight: 600;
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  padding-left: 70%;
+  background-image: url(./images/icon-dollar.svg);
+  background-color: hsl(180, 22%, 93%);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-y: 10px;
+  background-position-x: 10px;
+}
+.bill_inp:hover {
+  background-color: hsl(180, 37%, 73%);
+  transition-duration: 0.5s;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* tip */
+.selectTip_cnt {
+  padding: 8px;
+}
+.selectTip_cnt:hover {
+  background-color: hsl(180, 27%, 85%);
+  border-radius: 10px;
+  transition: 1s;
+}
+.tip_options {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+/* tip button */
+.tip_btn_perc {
+  background-color: hsl(183, 100%, 15%);
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(224, 228, 231);
+}
+.tip_btn_perc:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.tip_btn_custom {
+  background-color: teal;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(15, 77, 15);
+  background-image: url(./images/);
+  background-color: hsl(180, 22%, 93%);
+}
+
+.numberOfPeople {
+}
+.numberOfPeople_inpt {
+  background-color: hsl(180, 22%, 93%);
+  color: rgb(15, 77, 15);
+  font-weight: 600;
+  width: 100%;
+  height: 50px;
+  padding-left: 90%;
+  border: none;
+  border-radius: 5px;
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  margin-top: 5px;
+}
+
+/* totals */
+.tipTotals {
+  background-color: hsl(183, 100%, 15%);
+  height: 210px;
+  border-radius: 10px;
+  padding: 20px 25px 0px 25px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tipAmount,
+.total {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-y: 15px;
+  background-position-x: 190px;
+}
+
+h3 {
+  font-size: 0.7rem;
+  color: whitesmoke;
+}
+h5 {
+  color: hsl(172, 37%, 38%);
+  font-size: 0.6rem;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tip_value {
+  margin-left: 110px;
+  display: flex;
+  align-items: center;
+
+  color: hsl(172, 67%, 45%);
+}
+.total_value {
+  margin-left: 145px;
+  display: flex;
+  align-items: center;
+
+  color: hsl(172, 67%, 45%);
+}
+.reset_btn {
+  height: 35px;
+  background-color: hsl(172, 39%, 15%);
+  border: none;
+
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+}
+.reset_btn:hover {
+  height: 40px;
+  background-color: hsl(172, 67%, 45%);
+  transition: 1s;
+
+  color: whitesmoke;
+  animation: ease-in-out;
+}
