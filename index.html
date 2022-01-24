@@ -28,9 +28,10 @@
           <input
             id="bill"
             class="bill_inp"
-            type="number"
+            type="text"
             name="bill"
-            value="120"   
+            placeholder="00"
+
           />
         </div>
 
@@ -50,7 +51,7 @@
         <!-- numberOfPeople Tab -->
         <div class="numberOfPeople">
           <label for="numberOfPeople">Number Of People</label>
-          <input id="numberOfPeople" class="numberOfPeople_inpt" type="number" name="numberOfPeople" value="5">
+          <input id="numberOfPeople" class="numberOfPeople_inpt" type="number" name="numberOfPeople" placeholder="00">
         </div>
 
         <!-- tipTotals -->
@@ -69,7 +70,7 @@
           </div>
           <h4 id="total_value" class="total_value">00.00</h4>
           </div>
-          <button class="reset_btn">RESET</button>
+          <button id="reset_btn" class="reset_btn">RESET</button>
         </div>
       </section>
     </main>

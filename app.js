@@ -8,10 +8,17 @@
 /////////////////////
 // JS Sequence:
 
-let billAmount = document.getElementById("bill").value;
-// console.log(parseInt(billAmount));
-let numOf_billAmount = parseFloat(billAmount); //<--this is the bill amount set as an integer
-console.log(numOf_billAmount);
+let billAmount = document.getElementById("bill");
+
+let billValue = 0.0; // default value
+
+billAmount.addEventListener("input", setBillValue);
+
+function setBillValue() {
+  billValue = parseFloat(billAmount.value);
+  console.log(billValue);
+}
+
 //billAmount = process of taking the value --> turning it into a number;
 
 // selectTip %///////////-->
@@ -90,12 +97,18 @@ console.log(percentageOf_fifty_percent);
 //we need to find out how many people:
 //numberOfPersons = document.getElementById('numberOfPeople');
 //valueOf_NumberOfPerson = numOfP.try to get the value attribute. --> process of turning the entered value to numerical data we can use/not string;
-let numOfP = document.getElementById("numberOfPeople");
-let attributeOf_numOfp = numOfP.setAttribute("value", "2"); ///<SOMETHING WRONG HERE *****
-let numOfP_value = numOfP.value;
-let numOf_numOfP_value = parseInt(numOfP_value); //<--- this is the number of person number set to integer
-console.log(numOf_numOfP_value);
 // complete
+let numOfP = document.getElementById("numberOfPeople");
+// let attributeOf_numOfp = numOfP.setAttribute("value", "0");
+
+let numOfPValue = 0;
+
+numOfP.addEventListener("input", setNumOfPValue);
+
+function setNumOfPValue() {
+  numOfPValue = parseInt(numOfP.value);
+  console.log(numOfPValue);
+}
 
 // Tip Amount
 let tip_amount = document.getElementById("tip_value");
@@ -117,34 +130,31 @@ console.log(totalAmount_innerT_value);
 //percentage applied to the bill
 
 // (Tips per person) Displayed when clicked
+
 five_percent.addEventListener("click", function (e) {
-  let tipCalculation =
-    (percentageOf_five_percent * numOf_billAmount) / numOf_numOfP_value;
+  let tipCalculation = (percentageOf_five_percent * billValue) / numOfPValue;
   let tip = (tip_amount.innerText = Math.round(tipCalculation * 100) / 100);
   tip;
 });
 
 ten_percent.addEventListener("click", function (e) {
-  let tipCalculation =
-    (percentageOf_ten_percent * numOf_billAmount) / numOf_numOfP_value;
+  let tipCalculation = (percentageOf_ten_percent * billValue) / numOfPValue;
   let tip = (tip_amount.innerText = Math.round(tipCalculation * 100) / 100);
   tip;
 });
 fifteen_percent.addEventListener("click", function (e) {
-  let tipCalculation =
-    (percentageOf_fifteen_percent * numOf_billAmount) / numOf_numOfP_value;
+  let tipCalculation = (percentageOf_fifteen_percent * billValue) / numOfPValue;
   let tip = (tip_amount.innerText = Math.round(tipCalculation * 100) / 100);
   tip;
 });
 twentyFive_percent.addEventListener("click", function (e) {
   let tipCalculation =
-    (percentageOf_twentyFive_percent * numOf_billAmount) / numOf_numOfP_value;
+    (percentageOf_twentyFive_percent * billValue) / numOfPValue;
   let tip = (tip_amount.innerText = Math.round(tipCalculation * 100) / 100);
   tip;
 });
 fifty_percent.addEventListener("click", function (e) {
-  let tipCalculation =
-    (percentageOf_fifty_percent * numOf_billAmount) / numOf_numOfP_value;
+  let tipCalculation = (percentageOf_fifty_percent * billValue) / numOfPValue;
   tipCalculation;
   let tip = (tip_amount.innerText = Math.round(tipCalculation * 100) / 100);
   tip;
@@ -153,32 +163,32 @@ fifty_percent.addEventListener("click", function (e) {
 // (Totals per person) Displayed when clicked
 five_percent.addEventListener("click", function (e) {
   let totalCalculation =
-    numOf_billAmount / numOf_numOfP_value +
-    (percentageOf_five_percent * numOf_billAmount) / numOf_numOfP_value;
+    billValue / numOfPValue +
+    (percentageOf_five_percent * billValue) / numOfPValue;
   let total = (total_amount.innerText =
     Math.round(totalCalculation * 100) / 100);
   total;
 });
 ten_percent.addEventListener("click", function (e) {
   let totalCalculation =
-    numOf_billAmount / numOf_numOfP_value +
-    (percentageOf_ten_percent * numOf_billAmount) / numOf_numOfP_value;
+    billValue / numOfPValue +
+    (percentageOf_ten_percent * billValue) / numOfPValue;
   let total = (total_amount.innerText =
     Math.round(totalCalculation * 100) / 100);
   total;
 });
 fifteen_percent.addEventListener("click", function (e) {
   let totalCalculation =
-    numOf_billAmount / numOf_numOfP_value +
-    (percentageOf_fifteen_percent * numOf_billAmount) / numOf_numOfP_value;
+    billValue / numOfPValue +
+    (percentageOf_fifteen_percent * billValue) / numOfPValue;
   let total = (total_amount.innerText =
     Math.round(totalCalculation * 100) / 100);
   total;
 });
 twentyFive_percent.addEventListener("click", function (e) {
   let totalCalculation =
-    numOf_billAmount / numOf_numOfP_value +
-    (percentageOf_twentyFive_percent * numOf_billAmount) / numOf_numOfP_value;
+    billValue / numOfPValue +
+    (percentageOf_twentyFive_percent * billValue) / numOfPValue;
   let total = (total_amount.innerText =
     Math.round(totalCalculation * 100) / 100);
   total;
@@ -186,10 +196,22 @@ twentyFive_percent.addEventListener("click", function (e) {
 
 fifty_percent.addEventListener("click", function (e) {
   let totalCalculation =
-    numOf_billAmount / numOf_numOfP_value +
-    (percentageOf_fifty_percent * numOf_billAmount) / numOf_numOfP_value;
+    billValue / numOfPValue +
+    (percentageOf_fifty_percent * billValue) / numOfPValue;
   let total = (total_amount.innerText =
     Math.round(totalCalculation * 100) / 100);
   total;
 });
+
+let reset_btn = document.getElementById("reset_btn");
+reset_btn.addEventListener("click", resetValues);
+
+function resetValues() {
+  billAmount.value = 0;
+  billValue = 0;
+  numOfP.value = 0;
+
+  console.log("working");
+}
+
 console.log(`we live!`);
