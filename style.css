@@ -7,8 +7,7 @@
   font-size: 24px;
 }
 body {
-  background-color: black;
-  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
 }
 main {
   min-width: 375px;
@@ -27,7 +26,7 @@ h1 {
   margin: 20px;
 }
 .container {
-  height: 100vh;
+  height: 100%;
   width: 375px;
   border-radius: 20px 20px 0px 0px;
   padding: 20px 20px;
@@ -49,7 +48,7 @@ label {
 .bill_inp {
   color: rgb(15, 77, 15);
   font-weight: 600;
-  height: 50px;
+  height: 40px;
   width: 100%;
   border-radius: 8px;
   border: none;
@@ -81,7 +80,8 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: 1s;
 }
 .tip_options {
-  height: 200px;
+  /* height: 200px; */
+  height: 8rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -118,8 +118,8 @@ input[type="number"]::-webkit-outer-spin-button {
   color: rgb(15, 77, 15);
   font-weight: 600;
   width: 100%;
-  height: 50px;
-  padding-left: 90%;
+  height: 40px;
+  padding-left: 70%;
   border: none;
   border-radius: 5px;
   background-image: url(./images/icon-person.svg);
@@ -132,7 +132,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /* totals */
 .tipTotals {
   background-color: hsl(183, 100%, 15%);
-  height: 210px;
+  height: 9rem;
   border-radius: 10px;
   padding: 20px 25px 0px 25px;
   margin-top: 20px;
@@ -148,7 +148,6 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   background: url(./images/icon-dollar.svg) no-repeat;
-
   /* background-repeat: no-repeat; */
   background-size: 18px;
   background-position-y: 15px;
@@ -168,6 +167,7 @@ h5 {
   font-size: 0.6rem;
 }
 .left {
+  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,19 +176,17 @@ h5 {
   margin-left: 110px;
   display: flex;
   align-items: center;
-
   color: hsl(172, 67%, 45%);
 }
 .total_value {
-  margin-left: 145px;
+  margin-left: 110px;
   display: flex;
   align-items: center;
-
   color: hsl(172, 67%, 45%);
 }
 .reset_btn {
   height: 35px;
-  background-color: hsl(172, 39%, 15%);
+  background-color: hsl(186, 49%, 29%);
   border: none;
 
   border-radius: 5px;
@@ -206,6 +204,7 @@ h5 {
 a {
   font-size: 0.5rem;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   main {
     width: 100vw;
@@ -215,57 +214,75 @@ a {
     border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
-    height: 450px;
-    width: 1000px;
-
+    height: 400px;
+    width: 700px;
     padding: 30px;
   }
   .leftSide {
-    width: 50%;
+    width: 45%;
     margin-right: 10px;
   }
   .rightSide {
-    width: 50%;
+    width: 55%;
     margin-left: 10px;
+  }
+  .bill_inp {
+    margin-bottom: 10px;
   }
   .bill_inp,
   .numberOfPeople_inpt {
-    padding-left: 90%;
+    padding-left: 70%;
   }
   .tip_options {
-    height: 150px;
+    height: 100px;
     width: 100%;
-    gap: 15px;
+    gap: 8px;
     justify-content: unset;
   }
   .selectTip_cnt {
     padding: 0px;
   }
-  .tip_btn_custom {
-    width: 140px;
-  }
+  .tip_btn_custom,
   .tip_btn_perc {
-    width: 140px;
+    height: 40px;
+    width: 85px;
   }
+  .tip_btn_custom {
+    font-size: 0.7rem;
+  }
+  .numberOfPeople {
+    margin-top: 20px;
+  }
+
   .tipTotals {
     margin-top: 0px;
     height: 100%;
     gap: 50px;
   }
-  .reset_btn {
-    height: 45px;
-    margin-top: 80px;
+  h3 {
+    font-size: 0.5rem;
+  }
+  h5 {
+    font-size: 0.5rem;
+  }
+
+  .left {
+    margin-right: 40px;
   }
   .tip_value {
-    margin-left: 150px;
-    font-size: 2rem;
+    margin-left: 10px;
+    font-size: 1.4rem;
   }
   .total_value {
-    margin-left: 189px;
-    font-size: 2rem;
+    margin-left: 10px;
+    font-size: 1.4rem;
   }
   .tipAmount,
   .total {
-    background-position-x: 220px;
+    background-position-x: 130px;
+  }
+  .reset_btn {
+    height: 45px;
+    margin-top: 1rem;
   }
 }
