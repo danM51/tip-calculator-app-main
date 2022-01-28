@@ -2,16 +2,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: monospace;
+  /* font-family: monospace; */
+  font-family: "Space Mono", monospace;
   font-size: 24px;
 }
 body {
   background-color: black;
-
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  /* width: 375px; */
 }
 main {
   min-width: 375px;
@@ -37,7 +34,6 @@ h1 {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   gap: 05px;
 }
 h2 {
@@ -49,8 +45,7 @@ label {
   font-weight: bold;
   color: hsl(180, 12%, 31%);
 }
-.bill {
-}
+
 .bill_inp {
   color: rgb(15, 77, 15);
   font-weight: 600;
@@ -118,8 +113,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: hsl(180, 22%, 93%);
 }
 
-.numberOfPeople {
-}
 .numberOfPeople_inpt {
   background-color: hsl(180, 22%, 93%);
   color: rgb(15, 77, 15);
@@ -154,11 +147,16 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 60px;
   display: flex;
   flex-direction: row;
-  background-image: url(./images/icon-dollar.svg);
-  background-repeat: no-repeat;
+  background: url(./images/icon-dollar.svg) no-repeat;
+
+  /* background-repeat: no-repeat; */
   background-size: 18px;
   background-position-y: 15px;
   background-position-x: 190px;
+}
+.dollar {
+  width: 20px;
+  height: 20px;
 }
 
 h3 {
@@ -203,4 +201,71 @@ h5 {
 
   color: whitesmoke;
   animation: ease-in-out;
+}
+.attribution,
+a {
+  font-size: 0.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  main {
+    width: 100vw;
+    justify-content: center;
+  }
+  .container {
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    width: 1000px;
+
+    padding: 30px;
+  }
+  .leftSide {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .rightSide {
+    width: 50%;
+    margin-left: 10px;
+  }
+  .bill_inp,
+  .numberOfPeople_inpt {
+    padding-left: 90%;
+  }
+  .tip_options {
+    height: 150px;
+    width: 100%;
+    gap: 15px;
+    justify-content: unset;
+  }
+  .selectTip_cnt {
+    padding: 0px;
+  }
+  .tip_btn_custom {
+    width: 140px;
+  }
+  .tip_btn_perc {
+    width: 140px;
+  }
+  .tipTotals {
+    margin-top: 0px;
+    height: 100%;
+    gap: 50px;
+  }
+  .reset_btn {
+    height: 45px;
+    margin-top: 80px;
+  }
+  .tip_value {
+    margin-left: 150px;
+    font-size: 2rem;
+  }
+  .total_value {
+    margin-left: 189px;
+    font-size: 2rem;
+  }
+  .tipAmount,
+  .total {
+    background-position-x: 220px;
+  }
 }

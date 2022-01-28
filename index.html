@@ -12,9 +12,9 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Spartan:wght@700&display=swap");
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -22,67 +22,63 @@
       <h1>SPLI<br />TTER</h1>
       <!-- containerOfApp -->
       <section class="container">
-        <!-- totalBill Input -->
-        <div class="bill">
-          <label for="bill">Bill</label>
-          <input
-            id="bill"
-            class="bill_inp"
-            type="text"
-            name="bill"
-            placeholder="00"
-
-          />
-        </div>
-
-        <!-- SelectTip% tabs -->
-        <div class="selectTip_cnt">
-          <label for="selectTip">Select Tip %</label>
-          <div class="tip_options">
-            <button id="five_percent" class="tip_btn_perc">5%</button>
-            <button id="ten_percent" class="tip_btn_perc">10%</button>
-            <button id="fifteen_percent" class="tip_btn_perc">15%</button>
-            <button id="twentyFive_percent" class="tip_btn_perc">25%</button>
-            <button id="fifty_percent" class="tip_btn_perc">50%</button>
-            <input type="number" class="tip_btn_custom" placeholder="Custom"></input>
+      <div class="leftSide">
+          <!-- totalBill Input -->
+          <div class="bill">
+            <label for="bill">Bill</label>
+            <input id="bill" class="bill_inp" type="text" name="bill" placeholder="00" />
           </div>
-        </div>
-
-        <!-- numberOfPeople Tab -->
-        <div class="numberOfPeople">
-          <label for="numberOfPeople">Number Of People</label>
-          <input id="numberOfPeople" class="numberOfPeople_inpt" type="number" name="numberOfPeople" placeholder="00">
-        </div>
-
+          
+          <!-- SelectTip% tabs -->
+          <div class="selectTip_cnt">
+            <label for="selectTip">Select Tip %</label>
+            <div class="tip_options">
+              <button id="five_percent" class="tip_btn_perc">5%</button>
+              <button id="ten_percent" class="tip_btn_perc">10%</button>
+              <button id="fifteen_percent" class="tip_btn_perc">15%</button>
+              <button id="twentyFive_percent" class="tip_btn_perc">25%</button>
+              <button id="fifty_percent" class="tip_btn_perc">50%</button>
+              <input type="number" class="tip_btn_custom" placeholder="Custom"></input>
+            </div>
+          </div>
+          
+          <!-- numberOfPeople Tab -->
+          <div class="numberOfPeople">
+            <label for="numberOfPeople">Number Of People</label>
+            <input id="numberOfPeople" class="numberOfPeople_inpt" type="number" name="numberOfPeople" placeholder="00">
+          </div>
+      </div>  
+       
+      <div class="rightSide">
         <!-- tipTotals -->
         <div class="tipTotals">
           <div class="tipAmount">
-          <div class="left">
-            <h3>Tip Amount</h3>
-            <h5>/ person</h5>
-          </div>
-          <h4 id="tip_value" class="tip_value">00.00</h4>
+            <div class="left">
+              <h3>Tip Amount</h3>
+              <h5>/ person</h5>
+            </div>
+
+            <h4 id="tip_value" class="tip_value">00.00</h4>
           </div>
           <div class="total">
-          <div class="left">
-            <h3>Total</h3>
-            <h5>/ person</h5>
-          </div>
-          <h4 id="total_value" class="total_value">00.00</h4>
+            <div class="left">
+              <h3>Total</h3>
+              <h5>/ person</h5>
+            </div>
+
+            <h4 id="total_value" class="total_value">00.00</h4>
           </div>
           <button id="reset_btn" class="reset_btn">RESET</button>
         </div>
-      </section>
-    </main>
-    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset -->
 
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      </div>
+        
+      </section>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Daniel Msangi</a>.
+      </div>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>
