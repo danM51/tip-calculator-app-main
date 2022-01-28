@@ -26,8 +26,8 @@ h1 {
   margin: 20px;
 }
 .container {
-  height: 100%;
-  width: 375px;
+  max-height: 1000px;
+  min-width: 375px;
   border-radius: 20px 20px 0px 0px;
   padding: 20px 20px;
   background-color: whitesmoke;
